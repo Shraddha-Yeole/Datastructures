@@ -21,6 +21,9 @@ public class Basics_array{
 			System.out.println(j);
 		}
 		
+		System.out.println("\n Sort Elements");
+		Array.sort(b);
+		
 		System.out.println("\nSearch element in array");
 		int found=30;
 		int k;
