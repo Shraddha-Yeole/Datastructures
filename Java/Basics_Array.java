@@ -1,8 +1,13 @@
+import java.util.*;
+
 public class Basics_array{
 	
 	public static void main(String[] args)
 	{
 		System.out.println("\nArray");
+	
+		//int[] check;
+		//System.out.println(check); //variable not initialized
 		
 		int[] a=new int[5];
 		a[0]=10;
@@ -20,9 +25,6 @@ public class Basics_array{
 		{
 			System.out.println(j);
 		}
-		
-		System.out.println("\n Sort Elements");
-		Array.sort(b);
 		
 		System.out.println("\nSearch element in array");
 		int found=30;
@@ -42,7 +44,30 @@ public class Basics_array{
 			System.out.println(b[f]);
 		}
 		
+		/* java.util.Arrays   public class Arrays extend Object */
 		
+		//1. asList
+		
+		String[] friends={"rewa","mani","nayan","piyusha"};
+		List<String> list=Arrays.asList(friends);
+		for(String result:list){
+			System.out.println(result);
+		}
+		
+		
+		//2.binarySearch()
+		
+		int[] search={23,45,78,65,34};
+		Arrays.sort(search);
+		for(int i:search)
+		{
+			System.out.println(i);
+		}
+		
+		int resVal=Arrays.binarySearch(search, 78);
+		System.out.println(resVal);      //returns index else insertionpoint-1
+		
+		//copyOf method
 		
 	}
 }
