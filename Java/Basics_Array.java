@@ -68,6 +68,12 @@ public class Basics_array{
 		System.out.println(resVal);      //returns index else insertionpoint-1
 		
 		//copyOf method
+		int arr2 []=Arrays.copyOf(search,3);
+		for(int anw:arr2)
+		{
+			System.out.println(anw);
+		}
+	
 		
 	}
 }
