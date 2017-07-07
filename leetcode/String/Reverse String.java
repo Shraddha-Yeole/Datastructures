@@ -8,6 +8,10 @@ public class Solution {
         
         char[] result=s.toCharArray();
         int j=0;
+        if(s.length()<=1 || s.isEmpty())
+        {
+            return s;
+        }
         while(j<(result.length-1))
         {
             j++;
