@@ -2,3 +2,13 @@
 
 You may assume that the array is non-empty and the majority element always exist in the array. */
 
+public class Solution {
+    public int majorityElement(int[] nums) {
+        
+     
+    Arrays.sort(nums);
+    return nums[nums.length/2];
+
+
+    }
+}
