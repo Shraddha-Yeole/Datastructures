@@ -7,29 +7,22 @@ Your task is to find the maximum distance
 
 public class Solution {
     public int maxDistance(List<List<Integer>> arrays) {
+        int minValueInList = arrays.get(0).get(0);
+        int maxValueInList = arrays.get(0).get(arrays.get(0).size() - 1)
         
-        ArrayList<Integer> resultmax=new ArrayList<Integer>();
-        ArrayList<Integer> resultmin=new ArrayList<Integer>();
-        int k=0;
+        int resultantDistance = Integer.MIN_VALUE;
         
-       for(List<Integer> i:arrays)
-       {
-               resultmax.add(i.get(i.size()-1));
-               resultmin.add(i.get(0));
-               Collections.sort(resultmin,Collections.reverseOrder());
-       }
-                      System.out.println("Min number from all array="+Collections.min(resultmin));
-                      System.out.println("Max number from all array="+Collections.max(resultmax));
-                      int a= Collections.min(resultmin);
-                      int b= Collections.max(resultmax);
-                      for(List<Integer> j:arrays)
-                      {
-                          
-                      if(j.contains(a) && j.contains(b)){
-                          return 0;
-                      }
-                    }
-        return (b-a);
-                      
+        for(i=1; i<arrays.size(); i++)
+        {
+          int minValue = arrays.get(i).get(0);
+          int maxvalue = arrays.get(i).get(arrays.get(i).size()-1);
+          resultantDistance = Math.max(resultantDistance, Math.abs(maxValue - minValueInList));
+          resultantDistance = Math.max(resultantDistance, Math.abs(minValue - maxValueInList));
+          
+          maxValueInList = Math.max(maxValue, maxValueInList);
+          minValueInList = Math.min(minValue, maxValueInList);
+          
+        }
+        return resultantDistance;
     }
 }
