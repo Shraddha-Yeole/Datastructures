@@ -7,9 +7,6 @@ Input: [1,2,3,4]
 Output: 24
 */
 
-/* Time complexity : O\big(nlog(n)\big)O(nlog(n)). Sorting the numsnums array takes nlog(n)nlog(n) time.
-Space complexity : O(log(n)))O(log(n))). Sorting takes O(logn) space. */
-
 
 public class Solution {
     public int maximumProduct(int[] nums) {
@@ -20,9 +17,6 @@ public class Solution {
 }
 }
 
-/* Recommended solution: Time complexity : O(n)O(n). Only one iteration over the numsnums array of length nn is required.
-
-Space complexity : O(1)O(1). Constant extra space is used. */
 
 public class Solution {
     public int maximumProduct(int[] nums) {
