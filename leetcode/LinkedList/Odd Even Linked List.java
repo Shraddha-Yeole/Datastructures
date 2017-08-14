@@ -12,4 +12,40 @@ The first node is considered odd, the second node even and so on ...
 */
 
 
-
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode oddEvenList(ListNode head) {
+        
+        ListNode o = head, e = o.next, p = e;
+        
+        if(head== null || head.next == null){
+            return head;
+        }
+        
+        if(head!=null){
+            
+        
+        
+        while(e !=null && e.next != null){
+            
+            o.next = e.next;
+            e.next = e.next.next;
+            o = o.next;
+            e = e.next;
+        }
+        
+        o.next = p;
+        
+        }
+        
+        return head;
+         
+    }
+}
