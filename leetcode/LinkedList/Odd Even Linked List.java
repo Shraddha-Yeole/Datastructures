@@ -20,32 +20,21 @@ The first node is considered odd, the second node even and so on ...
  *     ListNode(int x) { val = x; }
  * }
  */
+
+
 public class Solution {
-    public ListNode oddEvenList(ListNode head) {
-        
-        ListNode o = head, e = o.next, p = e;
-        
-        if(head== null || head.next == null){
-            return head;
+public ListNode oddEvenList(ListNode head) {
+    if (head != null) {
+    
+        ListNode odd = head, even = head.next, evenHead = even; 
+    
+        while (even != null && even.next != null) {
+            odd.next = odd.next.next; 
+            even.next = even.next.next; 
+            odd = odd.next;
+            even = even.next;
         }
-        
-        if(head!=null){
-            
-        
-        
-        while(e !=null && e.next != null){
-            
-            o.next = e.next;
-            e.next = e.next.next;
-            o = o.next;
-            e = e.next;
-        }
-        
-        o.next = p;
-        
-        }
-        
-        return head;
-         
+        odd.next = evenHead; 
     }
-}
+    return head;
+}}
