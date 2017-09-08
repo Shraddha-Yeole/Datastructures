@@ -19,3 +19,49 @@ Explanation
 1. 0th position is removed, 1 is deleted from the list. 
 2. Again 0th position is deleted and we are left with empty list. */
 
+/*
+  Delete Node at a given position in a linked list 
+  head pointer input could be NULL as well for empty list
+  Node is defined as 
+  class Node {
+     int data;
+     Node next;
+  }
+*/
+    // This is a "method-only" submission. 
+    // You only need to complete this method. 
+
+Node Delete(Node head, int position) {
+  // Complete this method
+    
+    
+    Node temp = head;
+    Node prev = head;
+    int pos = 0;
+    
+    if(position == 0){
+        head = head.next;
+        return head;
+    }
+    
+    while(temp.next!= null){
+       prev = temp; 
+       temp = temp.next;
+       pos++;
+        
+        if(pos == position && temp.next!= null){
+            
+            prev.next = temp.next;
+        }else if(pos == position && temp.next == null){
+            
+            prev.next= null;
+        }
+        
+        
+    }
+    
+    return head;
+    
+    
+
+}
