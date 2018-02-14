@@ -1,0 +1,1 @@
+/* Find magic numbers between given range*/
