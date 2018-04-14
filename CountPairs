@@ -1,0 +1,21 @@
+/* Count pairs from two BSTs whose sum is equal to a given value x
+Given two BSTs containing n1 and n2 distinct nodes respectively. Given a value x. The problem is to count all pairs from both the BSTs whose sum is equal to x.
+
+Examples:
+
+Input : BST 1:    5        
+                /   \      
+               3     7      
+              / \   / \    
+             2  4  6   8   
+
+        BST 2:    10        
+                /   \      
+               6     15      
+              / \   /  \    
+             3  8  11  18
+        x = 16
+    
+Output : 3
+The pairs are:
+(5, 11), (6, 10) and (8, 8) */
